@@ -10,14 +10,24 @@ const PostList = () => {
     const { posts, setPosts } = usePostContext();
     const [isArrowUp, setIsArrowUp] = useState(false);
     const [valueTitle, setValueTitle] = useState('');
+    const [error, setError] = useState(null);
 
     useEffect(()=>{
       const getPosts = async () =>{
-        const order = isArrowUp ? 'order=created_at': 'order=-created_at' 
-        const title = valueTitle ? `title=${valueTitle}`: ''
-        const response = await axios.get(`http://localhost:3000/api/posts?${order}&${title}`);
-        const newPosts = response.data;
-        setPosts(newPosts);
+
+        try{
+          const order = isArrowUp ? 'order=created_at': 'order=-created_at' 
+          const title = valueTitle ? `title=${valueTitle}`: ''
+          const response = await axios.get(`http://localhost:3000/api/posts?${order}&${title}`);
+
+          const newPosts = response.data;
+          setPosts(newPosts);
+          setError(null);
+
+        } catch (err){
+          setError("An error occurred while fetching the posts");
+          setPosts(null);
+        }
       }
 
       getPosts();
@@ -27,6 +37,14 @@ const PostList = () => {
       setIsArrowUp(!isArrowUp);
     };
 
+    if (error){
+      return (
+        <div className={styles.error}>
+          <p>{error}</p>
+        </div>
+    )
+
+    }
     return (
       <div className={styles.postListPage}>
         <div className={styles.filters}>
