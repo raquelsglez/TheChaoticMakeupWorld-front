@@ -1,0 +1,32 @@
+.postCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 0.5em;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 40px 50px 50px 50px;
+    transition: all 0.2s linear;
+}
+
+.postCard p{
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.postCard img{
+    object-fit: contain;
+    height: 200px;
+    border-radius: 0.5em;
+}
+
+.postCard:hover{
+    transform: scale(1.05);
+    transition: all 0.2s linear;
+    cursor: pointer;
+}

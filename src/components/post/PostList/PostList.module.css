@@ -1,0 +1,67 @@
+.postListPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.postList{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+}
+
+.ordering{
+    background-color: white;
+    border-radius: 0.5em;
+    height: 30px;
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.ordering p{
+    margin-right: 10px;
+}
+
+.arrowUp {
+    transform: rotate(180deg);
+    transition: transform 0.3s;
+}
+
+.arrowDown {
+    transition: transform 0.3s;
+}
+
+.titleFilter{
+    background-color: white;
+    border-radius: 0.5em;
+    height: 30px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+.titleFilter input{
+    margin-left: 10px;
+    border-radius: 0.5em;
+    border: 1px solid;
+}

@@ -1,0 +1,19 @@
+.navBar {
+    background-color: black;
+    margin: 0px;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+.navBar ul{
+    list-style: none;
+}
+
+.navBar a{
+    text-decoration: none;
+    color: white;
+}
