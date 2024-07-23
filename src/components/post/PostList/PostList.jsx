@@ -54,7 +54,7 @@ const PostList = () => {
           </div>
           <div className={styles.titleFilter}>
             <p>Título:</p>
-            <input value={valueTitle} onChange={(e)=>setValueTitle(e.target.value)}></input>
+            <input value={valueTitle} onChange={(e)=>setValueTitle(e.target.value)}/>
           </div>
         </div>
         <div className={styles.postList}>

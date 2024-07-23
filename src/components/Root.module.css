@@ -17,3 +17,26 @@
     text-decoration: none;
     color: white;
 }
+
+.profileIcon {
+    color: white;
+    position: absolute;
+    right: 90px;
+    cursor:pointer;
+    transition: 0.1s all linear;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileIcon p{
+    font-size: 14px;
+    margin: 6px;
+}
+
+.profileIcon:hover {
+    transform: scale(1.1);
+    transition: 0.1s all linear;
+}
+

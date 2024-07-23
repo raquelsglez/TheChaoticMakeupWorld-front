@@ -10,6 +10,7 @@
     width: 300px;
     margin: 40px 50px 50px 50px;
     transition: all 0.2s linear;
+    cursor: pointer;
 }
 
 .postCard p{
@@ -28,5 +29,4 @@
 .postCard:hover{
     transform: scale(1.05);
     transition: all 0.2s linear;
-    cursor: pointer;
 }
