@@ -21,9 +21,9 @@ const PostDetail = () => {
           if (user.id){ //si el usuario está logueado, realizo una peticion con autorizacion -> con el id de user
             response = await axios.get(`http://localhost:3000/api/posts/${id}`, {
               headers: {
-                  'Authorization': `${user.id}`,
+                'Authorization': `Bearer ${user.token}`,
               }
-            })
+            });
           }else{ //si no esta logueado, sin autorizacion
             response = await axios.get(`http://localhost:3000/api/posts/${id}`);
           }
@@ -50,14 +50,23 @@ const PostDetail = () => {
 
         if(post.is_favorite){ //si el post es favorito, solicitud para quitarlo de favoritos
           try{
-            await axios.post(`http://localhost:3000/api/posts/${id}/unfavorites/${user.id}`);        
+            await axios.post(`http://localhost:3000/api/posts/${id}/unfavorites`, {}, {
+              headers: {
+                'Authorization': `Bearer ${user.token}`,
+              }
+            });
+
           } catch (err){
             setError("An error occurred while trying to do unfavorite");
           };
 
         }else{ //si el post no es favorito, solicitud para añadir a favoritos
           try{
-            await axios.post(`http://localhost:3000/api/posts/${id}/favorites/${user.id}`);        
+            await axios.post(`http://localhost:3000/api/posts/${id}/favorites`, {}, {
+              headers: {
+                'Authorization': `Bearer ${user.token}`,
+              }
+            })
           } catch (err){
             setError("An error occurred while trying to do favorite");
           };
