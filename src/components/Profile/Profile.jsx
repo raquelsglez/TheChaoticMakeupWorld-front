@@ -8,7 +8,7 @@ const Profile = () => {
     const navigate = useNavigate()
 
     const handleClick = () => {
-        setUser({})
+        setUser({}) //limpiar usuario en el contexto al hacer logout
         navigate('/login');
         return;
     }

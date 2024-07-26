@@ -6,14 +6,14 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 
 const Login = () => {
-    const { setUser } = usePostContext();
+    const { setUser } = usePostContext(); //utilizo el contexto de post para actualizar user
     const [valueEmail, setValueEmail] = useState('');
     const [valuePassword, setValuePassword] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+        e.preventDefault() //prevenir comportamiento por defecto del form
 
         if(valueEmail === '' || valuePassword === ''){
             setError('Both fields are required');
@@ -21,19 +21,19 @@ const Login = () => {
         }
 
         try{
-            const response = await axios.post(
+            const response = await axios.post( //solicitud de inicio sesi
                 'http://localhost:3000/api/auth/login',
                 {
                     email: valueEmail,
                     password: valuePassword
                 }
             );
-            setError('');
-            setUser(response.data);
+            setError(''); //limpio mensaje de error
+            setUser(response.data); //actualizo el user en el contexto
             navigate('/')
 
         } catch (err){
-            setError(err.response.data.message);
+            setError(err.response.data.message); //muestro mensaje de error
         }
     }
 

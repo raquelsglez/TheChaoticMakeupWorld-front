@@ -7,15 +7,15 @@ import { usePostContext } from "../context/PostContext";
 
 
 function Root() {
-  const { user } = usePostContext();
+  const { user } = usePostContext(); //contexto para obtener user
   const navigate = useNavigate();
 
   const handleClick = () => {
-    if(user.username){
+    if(user.username){ // al hacer click en el icono de usuario -> si el user esta logdueado navegar al profile
       navigate('/profile');
       return;
     }
-    navigate('/login');
+    navigate('/login'); //si el usuario no esta logueado navegar al login
     return;
   };
 

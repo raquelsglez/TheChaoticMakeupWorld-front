@@ -13,7 +13,7 @@ function App() {
     <PostProvider>
       <Router>
           <Routes>
-            <Route path="/" element={<Root />} >
+            <Route path="/" element={<Root />} >   //Ruta principal
               <Route path="/" element={<PostList />} />
               <Route path="/post/:id" element={<PostDetail />} />
               <Route path="/register" element={<Register />} />

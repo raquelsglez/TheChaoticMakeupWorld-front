@@ -14,7 +14,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        if(
+        if( //verificacion de campos no vacios
             valueUsername === '' ||
             valueFirstName === '' || 
             valueLastName === '' || 
@@ -25,7 +25,7 @@ const Register = () => {
             return;
         }
 
-        try{
+        try{ //realizar solicitud de register
             const response = await axios.post(
                 'http://localhost:3000/api/auth/register',
                 {

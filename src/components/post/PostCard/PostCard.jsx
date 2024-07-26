@@ -5,7 +5,7 @@ const PostCard = ({post}) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/post/${post.id}`);
+        navigate(`/post/${post.id}`); //navegacion a la PostDetail
     };
 
     return (

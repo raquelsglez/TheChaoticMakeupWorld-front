@@ -10,6 +10,7 @@
     width: 1000px;
     margin-top: 100px;
     text-align: center;
+    position: relative;
 }
 
 .postDetail img {
@@ -21,4 +22,30 @@
 .postDetail p{
     font-size: 20px;
     margin: 0;
+}
+
+.unfavorite{
+    color: rgb(201, 199, 199);
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transition: 0.1s all linear;
+}
+
+.unfavorite:hover{
+    transform: scale(0.9);
+    transition: 0.1s all linear;
+}
+
+.favorite{
+    color: #fd1f62;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    transition: 0.1s all linear;
+}
+
+.favorite:hover{
+    transform: scale(1.1);
+    transition: 0.1s all linear;
 }

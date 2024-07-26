@@ -1,10 +1,10 @@
 import { createContext, useState, useContext } from 'react';
 
-const PostContext = createContext();
+const PostContext = createContext();//crear contexto
 
 export const PostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
-  const [post, setPost] = useState([]);
+  const [post, setPost] = useState({});
   const [user, setUser] = useState({});
 
 
@@ -16,5 +16,5 @@ export const PostProvider = ({ children }) => {
 };
 
 export const usePostContext = () => {
-    return useContext(PostContext);
+    return useContext(PostContext); //hook personalizado para usar el contexto de Post
 }
