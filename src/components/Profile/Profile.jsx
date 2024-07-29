@@ -9,6 +9,7 @@ const Profile = () => {
 
     const handleClick = () => {
         setUser({}) //limpiar usuario en el contexto al hacer logout
+        localStorage.setItem('user', JSON.stringify({}));
         navigate('/login');
         return;
     }

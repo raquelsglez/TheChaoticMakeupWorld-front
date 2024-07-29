@@ -1,4 +1,4 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext, useEffect } from 'react';
 
 const PostContext = createContext();//crear contexto
 
@@ -6,11 +6,20 @@ export const PostProvider = ({ children }) => {
   const [posts, setPosts] = useState([]);
   const [post, setPost] = useState({});
   const [user, setUser] = useState({});
+  const [isLoad, setIsLoad] = useState(false);
 
+
+  useEffect(() => {
+    const userLocalStorage = localStorage.getItem('user');
+    if(userLocalStorage) {
+      setUser(JSON.parse(userLocalStorage));
+    }
+    setIsLoad(true)
+  }, []);
 
   return (
     <PostContext.Provider value={{ posts, setPosts, post, setPost, user, setUser }}>
-      {children}
+      {isLoad ? children : <p>Loading...</p>}
     </PostContext.Provider>
   );
 };

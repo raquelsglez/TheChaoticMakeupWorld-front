@@ -30,6 +30,7 @@ const Login = () => {
             );
             setError(''); //limpio mensaje de error
             setUser(response.data); //actualizo el user en el contexto
+            localStorage.setItem('user', JSON.stringify(response.data));
             navigate('/')
 
         } catch (err){
