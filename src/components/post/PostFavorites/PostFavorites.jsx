@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { usePostContext } from "../../../../context/PostContext";
-import AdminPostCard from "../PostCard/PostCard";
-import styles from "./PostList.module.css"
+import { usePostContext } from "../../../context/PostContext";
+import PostCard from "../PostCard/PostCard";
+import styles from "./PostFavorites.module.css"
 import { SlArrowDown } from "react-icons/sl";
 
 
-const AdminPostList = () => {
-    const { posts, setPosts, admin } = usePostContext(); //contexto de post para obetner y actualizar posts
+const PostFavorites = () => {
+    const { posts, setPosts, user } = usePostContext(); //contexto de post para obetner y actualizar posts
     const [isArrowUp, setIsArrowUp] = useState(false); //estado para el orden de los posts
     const [valueTitle, setValueTitle] = useState(''); //estado para el filtro tittle
     const [error, setError] = useState(null);
@@ -18,14 +18,12 @@ const AdminPostList = () => {
         try{
           const order = isArrowUp ? 'order=created_at': 'order=-created_at' //ordena por fecha-creacion
           const title = valueTitle ? `title=${valueTitle}`: '' //filtrado por tittle
-          const response = await axios.get(
-            `http://localhost:3000/api/admin/posts?${order}&${title}`, {
-              headers: {
-                'Authorization': `Bearer ${admin.token}`,
-              }
+          
+          const response = await axios.get(`http://localhost:3000/api/me/favorites?${order}&${title}`, {
+            headers: {
+              'Authorization': `Bearer ${user.token}`,
             }
-
-          );
+          })
 
           const newPosts = response.data;
           setPosts(newPosts);//actualizo posts
@@ -53,7 +51,8 @@ const AdminPostList = () => {
 
     }
     return (
-      <div className={styles.postListPage}>
+      <div className={styles.postListPageFavorite}>
+        <h1 className={styles.title}>My favorite posts</h1>
         <div className={styles.filters}>
           <div className={styles.ordering} onClick={handleOrderingClick}>
             <p>Creation date</p>
@@ -64,11 +63,11 @@ const AdminPostList = () => {
             <input value={valueTitle} onChange={(e)=>setValueTitle(e.target.value)}/>
           </div>
         </div>
-        <div className={styles.postList}>
-          {posts.map((post) => <AdminPostCard key={post.id} post={post}/>)}
+        <div className={styles.postListFavorite}>
+          {posts.map((post) => <PostCard key={post.id} post={post}/>)}
         </div>
       </div>
     )
 }
 
-export default AdminPostList;
+export default PostFavorites;

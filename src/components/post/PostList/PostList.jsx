@@ -49,11 +49,11 @@ const PostList = () => {
       <div className={styles.postListPage}>
         <div className={styles.filters}>
           <div className={styles.ordering} onClick={handleOrderingClick}>
-            <p> Fecha de creción</p>
+            <p>Creation date</p>
             <SlArrowDown className={isArrowUp ? styles.arrowUp : styles.arrowDown } />
           </div>
           <div className={styles.titleFilter}>
-            <p>Título:</p>
+            <p>Title:</p>
             <input value={valueTitle} onChange={(e)=>setValueTitle(e.target.value)}/>
           </div>
         </div>

@@ -15,6 +15,8 @@ import AdminPostEdit from "./components/admin/post/PostEdit/PostEdit";
 import AdminPostCreate from "./components/admin/post/PostCreate/PostCreate";
 import AdminPrivateRoute from "./components/admin/PrivateRoute"; 
 import AdminRegister from "./components/admin/auth/Register/Register";
+import PrivateRoute from "./components/PrivateRoute";
+import PostFavorites from "./components/post/PostFavorites/PostFavorites";
 
 function App() {
   return (
@@ -26,7 +28,11 @@ function App() {
               <Route path="/post/:id" element={<PostDetail />} />
               <Route path="/register" element={<Register />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/profile" element={<Profile />} />
+              <Route element={<PrivateRoute/>}>
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/favorites" element={<PostFavorites />} />
+              </Route>
+
             </Route>
             <Route path="/admin" element={<RootAdmin />}>
               <Route path="/admin/login" element={<AdminLogin />} />

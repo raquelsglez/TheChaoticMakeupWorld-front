@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 
 const AdminPrivateRoute = () => {
   const { admin } = usePostContext();
-  const navigate = useNavigate(); // Inicializa el hook aquí
+  const navigate = useNavigate();
 
   useEffect(()=>{
     if (!admin.id) {

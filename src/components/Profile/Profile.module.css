@@ -26,11 +26,40 @@
     margin-top: 10px;
     border-radius: 0.5em;
     transition: 0.1s all linear;
+    cursor: pointer;
 }
 
 .logout:hover {
     transform: scale(1.05);
     transition: 0.1s all linear;
     background-color: rgb(236, 208, 164);
+}
+
+.favoritePosts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(243, 220, 185);
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 0.5em;
+    transition: 0.1s all linear;
+    text-align: center;
+    height: 60px;
     cursor: pointer;
+}
+
+.favoritePosts:hover {
+    transform: scale(1.05);
+    transition: 0.1s all linear;
+    background-color: rgb(236, 208, 164);
+}
+
+.favoritePosts p{
+    margin: 1px;
+}
+
+.favoritePostsIcon{
+    margin-right: 15px;
 }

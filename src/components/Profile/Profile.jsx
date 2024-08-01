@@ -2,15 +2,21 @@ import { usePostContext } from "../../context/PostContext";
 import { CiLogout } from "react-icons/ci";
 import styles from './Profile.module.css';
 import { useNavigate } from 'react-router-dom';
+import { MdFavorite } from "react-icons/md";
 
 const Profile = () => {
     const { user, setUser } = usePostContext();
     const navigate = useNavigate()
 
-    const handleClick = () => {
+    const handleClickLogout = () => {
         setUser({}) //limpiar usuario en el contexto al hacer logout
         localStorage.setItem('user', JSON.stringify({}));
         navigate('/login');
+        return;
+    }
+
+    const handleClickFavorites = () => {
+        navigate('/favorites');
         return;
     }
 
@@ -19,7 +25,11 @@ const Profile = () => {
             <h1>{user.username}</h1>
             <p>{user.first_name} {user.last_name}</p>
             <p>{user.email}</p>
-            <div onClick={handleClick} className={styles.logout}>
+            <div onClick={handleClickFavorites} className={styles.favoritePosts}>
+                <p>My favorite posts</p>
+                <MdFavorite className={styles.favoritePostsIcon}/>
+            </div>
+            <div onClick={handleClickLogout} className={styles.logout}>
                 <p>Logout</p>
                 <CiLogout />
             </div>
