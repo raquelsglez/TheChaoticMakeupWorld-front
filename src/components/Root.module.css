@@ -74,6 +74,7 @@
     align-items: center;
     font-size: 30px;
     bottom: 0;
+    margin-top: auto;
 }
 
 .footer p{
