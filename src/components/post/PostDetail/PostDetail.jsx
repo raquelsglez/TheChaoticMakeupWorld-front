@@ -95,7 +95,7 @@ const PostDetail = () => {
       <div className={styles.postDetail}>
         <BsBalloonHeartFill size={50} className={`${post.is_favorite ? styles.favorite : styles.unfavorite}`} onClick={handleClick}/>
         <img src={post.image} alt={post.title}></img>
-        <h1>{post.title}</h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <p>{post.text}</p>
       </div>
     )

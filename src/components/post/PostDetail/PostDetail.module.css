@@ -51,3 +51,23 @@
     transform: scale(1.1);
     transition: 0.1s all linear;
 }
+
+@media (max-width: 1400px) {
+    .postDetail {
+        width: 750px;
+        margin-bottom: 100px;
+    }
+    
+    .postDetail img {
+        object-fit: contain;
+        height: 300px;
+    }
+    
+    .postDetail p{
+        font-size: 17px;
+    }
+
+    .title{
+        font-size: 25px;
+    }
+}

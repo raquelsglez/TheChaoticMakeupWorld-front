@@ -8,7 +8,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    position: fixed;
+    top: 100px;
 }
 
 .loginForm h1{
@@ -32,13 +33,13 @@
     font-size: 15px;
     background-color: rgb(243, 220, 185);
     transition: 0.1s all linear;
+    cursor: pointer;
 }
 
 .loginForm button:hover {
     transform: scale(1.05);
     transition: 0.1s all linear;
     background-color: rgb(236, 208, 164);
-    cursor: pointer;
 }
 
 .error{

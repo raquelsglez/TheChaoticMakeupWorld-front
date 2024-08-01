@@ -86,7 +86,7 @@ const AdminPostDetail = () => {
       <div className={styles.postDetail}>
         <GiTrashCan size={50} className={styles.deleteIcon} onClick={handleOpenModalDelete}/>
         <img src={post.image} alt={post.title}></img>
-        <h1>{post.title}</h1>
+        <h1 className={styles.title}>{post.title}</h1>
         <p>{post.text}</p>
         <Link className={styles.linkEdit} to={`/admin/post/${id}/edit`}>Edit</Link>
 
