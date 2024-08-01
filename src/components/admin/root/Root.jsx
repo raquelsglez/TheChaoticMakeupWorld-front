@@ -37,13 +37,15 @@ function RootAdmin() {
   if (!admin.id){
     return (
       <>
-        <nav className={styles.navBar}>
-          <ul>
-            <li className={styles.sectionHome}>
-              <p>THE CHAOTIC MAKEUP WORLD</p>
-            </li>
-          </ul>
-        </nav>
+      <header className={styles.header}>
+          <nav className={styles.navBar}>
+            <ul>
+              <li className={styles.sectionHome}>
+                <p>THE CHAOTIC MAKEUP WORLD</p>
+              </li>
+            </ul>
+          </nav>
+        </header>
         <Outlet/>
       </>
     );
@@ -51,32 +53,34 @@ function RootAdmin() {
 
   return (
     <>
+    <header className={styles.header}>
       <nav className={styles.navBarLogin}>
-        <ul>
-          <li className={styles.sectionHome}>
-            <RiHomeHeartFill onClick={handleClickHome} className={styles.homeIcon} size={35}/>
-            <Link to="/admin">THE CHAOTIC MAKEUP WORLD</Link>
-          </li>
-          <li>
-            <div className={styles.sectionActions}>
-              <div className={styles.sectionCreate}>
-                <div className={styles.createIcon} onClick={handleClickCreateNewAdmin}>
-                  <IoCreate/>
-                  <p>Create new admin</p>
-                </div> 
-                <div className={styles.createIcon} onClick={handleClickCreate}>
-                  <IoCreate/>
-                  <p>Create post</p>
-                </div> 
+          <ul>
+            <li className={styles.sectionHome}>
+              <RiHomeHeartFill onClick={handleClickHome} className={styles.homeIcon} size={35}/>
+              <Link to="/admin">THE CHAOTIC MAKEUP WORLD</Link>
+            </li>
+            <li>
+              <div className={styles.sectionActions}>
+                <div className={styles.sectionCreate}>
+                  <div className={styles.createIcon} onClick={handleClickCreateNewAdmin}>
+                    <IoCreate/>
+                    <p>Create new admin</p>
+                  </div> 
+                  <div className={styles.createIcon} onClick={handleClickCreate}>
+                    <IoCreate/>
+                    <p>Create post</p>
+                  </div> 
+                </div>
+                <div className={styles.logoutIcon} onClick={handleClickLogout}>
+                    <CiLogout />
+                    <p>Logout</p>
+                </div>
               </div>
-              <div className={styles.logoutIcon} onClick={handleClickLogout}>
-                  <CiLogout />
-                  <p>Logout</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </nav>
+            </li>
+          </ul>
+        </nav>
+      </header>
       <Outlet/>
     </>
   );
