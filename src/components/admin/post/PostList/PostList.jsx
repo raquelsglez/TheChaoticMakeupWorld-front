@@ -19,7 +19,7 @@ const AdminPostList = () => {
           const order = isArrowUp ? 'order=created_at': 'order=-created_at' //ordena por fecha-creacion
           const title = valueTitle ? `title=${valueTitle}`: '' //filtrado por tittle
           const response = await axios.get(
-            `http://localhost:3000/api/admin/posts?${order}&${title}`, {
+            `${import.meta.env.VITE_BACKEND_HOST}/api/admin/posts?${order}&${title}`, {
               headers: {
                 'Authorization': `Bearer ${admin.token}`,
               }

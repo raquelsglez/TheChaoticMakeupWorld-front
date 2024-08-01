@@ -19,13 +19,13 @@ const PostDetail = () => {
 
         try{
           if (user.id){ //si el usuario está logueado, realizo una peticion con autorizacion -> con el id de user
-            response = await axios.get(`http://localhost:3000/api/posts/${id}`, {
+            response = await axios.get(`${import.meta.env.VITE_BACKEND_HOST}/api/posts/${id}`, {
               headers: {
                 'Authorization': `Bearer ${user.token}`,
               }
             });
           }else{ //si no esta logueado, sin autorizacion
-            response = await axios.get(`http://localhost:3000/api/posts/${id}`);
+            response = await axios.get(`${import.meta.env.VITE_BACKEND_HOST}/api/posts/${id}`);
           }
 
           const newPost = response.data;
@@ -50,7 +50,7 @@ const PostDetail = () => {
 
         if(post.is_favorite){ //si el post es favorito, solicitud para quitarlo de favoritos
           try{
-            await axios.post(`http://localhost:3000/api/posts/${id}/unfavorites`, {}, {
+            await axios.post(`${import.meta.env.VITE_BACKEND_HOST}/api/posts/${id}/unfavorites`, {}, {
               headers: {
                 'Authorization': `Bearer ${user.token}`,
               }
@@ -62,7 +62,7 @@ const PostDetail = () => {
 
         }else{ //si el post no es favorito, solicitud para añadir a favoritos
           try{
-            await axios.post(`http://localhost:3000/api/posts/${id}/favorites`, {}, {
+            await axios.post(`${import.meta.env.VITE_BACKEND_HOST}/api/posts/${id}/favorites`, {}, {
               headers: {
                 'Authorization': `Bearer ${user.token}`,
               }

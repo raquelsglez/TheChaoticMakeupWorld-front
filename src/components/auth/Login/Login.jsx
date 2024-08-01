@@ -22,7 +22,7 @@ const Login = () => {
 
         try{
             const response = await axios.post( //solicitud de inicio sesi
-                'http://localhost:3000/api/auth/login',
+                `${import.meta.env.VITE_BACKEND_HOST}/api/auth/login`,
                 {
                     email: valueEmail,
                     password: valuePassword

@@ -19,7 +19,7 @@ const AdminPostDetail = () => {
         setPost({})
 
         try{
-          response = await axios.get(`http://localhost:3000/api/admin/posts/${id}`, {
+          response = await axios.get(`${import.meta.env.VITE_BACKEND_HOST}/api/admin/posts/${id}`, {
             headers: {
               'Authorization': `Bearer ${admin.token}`,
             }
@@ -43,7 +43,7 @@ const AdminPostDetail = () => {
 
     const handleClickDelete = async() => {
       try{
-        await axios.delete(`http://localhost:3000/api/admin/posts/${id}`, {
+        await axios.delete(`${import.meta.env.VITE_BACKEND_HOST}/api/admin/posts/${id}`, {
           headers: {
             'Authorization': `Bearer ${admin.token}`,
           }

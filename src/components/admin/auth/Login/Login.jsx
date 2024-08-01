@@ -21,7 +21,7 @@ const AdminLogin = () => {
 
         try{
             const response = await axios.post( //solicitud de inicio sesi
-                'http://localhost:3000/api/admin/auth/login',
+                `${import.meta.env.VITE_BACKEND_HOST}/api/admin/auth/login`,
                 {
                     email: valueEmail,
                     password: valuePassword

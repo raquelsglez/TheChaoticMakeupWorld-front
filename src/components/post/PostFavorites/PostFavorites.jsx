@@ -19,7 +19,7 @@ const PostFavorites = () => {
           const order = isArrowUp ? 'order=created_at': 'order=-created_at' //ordena por fecha-creacion
           const title = valueTitle ? `title=${valueTitle}`: '' //filtrado por tittle
           
-          const response = await axios.get(`http://localhost:3000/api/me/favorites?${order}&${title}`, {
+          const response = await axios.get(`${import.meta.env.VITE_BACKEND_HOST}/api/me/favorites?${order}&${title}`, {
             headers: {
               'Authorization': `Bearer ${user.token}`,
             }

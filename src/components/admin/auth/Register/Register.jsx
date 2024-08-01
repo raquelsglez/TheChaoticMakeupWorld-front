@@ -18,7 +18,7 @@ const AdminRegister = () => {
 
         try{ //realizar solicitud de register
             await axios.post(
-                'http://localhost:3000/api/admin/auth/register',
+                `${import.meta.env.VITE_BACKEND_HOST}/api/admin/auth/register`,
                 {
                     email: valueEmail,
                     password: valuePassword

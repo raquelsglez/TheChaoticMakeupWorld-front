@@ -20,7 +20,7 @@ const AdminPostEdit = () => {
         setPost({})
 
         try{
-          response = await axios.get(`http://localhost:3000/api/admin/posts/${id}`, {
+          response = await axios.get(`${import.meta.env.VITE_BACKEND_HOST}/api/admin/posts/${id}`, {
             headers: {
               'Authorization': `Bearer ${admin.token}`,
             }
@@ -55,7 +55,7 @@ const AdminPostEdit = () => {
 
       try{
         const response = await axios.put( //solicitud de inicio sesi
-            `http://localhost:3000/api/admin/posts/${id}`,
+            `${import.meta.env.VITE_BACKEND_HOST}/api/admin/posts/${id}`,
             {
                 image: valueImage,
                 title: valueTitle,
