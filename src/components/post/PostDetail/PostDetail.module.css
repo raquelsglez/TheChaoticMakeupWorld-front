@@ -30,6 +30,7 @@
     top: 40px;
     right: 40px;
     transition: 0.1s all linear;
+    cursor: pointer;
 }
 
 .unfavorite:hover{
@@ -43,6 +44,7 @@
     top: 40px;
     right: 40px;
     transition: 0.1s all linear;
+    cursor: pointer;
 }
 
 .favorite:hover{

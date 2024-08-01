@@ -1,0 +1,124 @@
+.navBarLogin, .navBar {
+    background-color: black;
+    margin: 0px;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.navBarLogin ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBarLogin a{
+    text-decoration: none;
+    color: white;
+}
+
+.navBar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.navBar p{
+    text-decoration: none;
+    color: white;
+}
+
+.homeIcon {
+    color: white;
+    cursor:pointer;
+    transition: 0.1s all linear;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+.homeIcon:hover{
+    transform: scale(1.1);
+    transition: 0.1s all linear;
+}
+
+.sectionActions{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectionCreate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+
+.createIcon {
+    color: white;
+    cursor:pointer;
+    transition: 0.1s all linear;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-right: 60px;
+}
+
+.createIcon p{
+    font-size: 14px;
+    margin: 6px;
+}
+
+.createIcon:hover {
+    transform: scale(1.1);
+    transition: 0.1s all linear;
+}
+
+.logoutIcon{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s all linear;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.logoutIcon p{
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+.logoutIcon:hover {
+    transform: scale(1.1);
+    transition: 0.1s all linear;
+}
+
+.sectionHome{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

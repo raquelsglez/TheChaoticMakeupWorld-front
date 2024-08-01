@@ -13,6 +13,7 @@
 
 .loginForm h1{
     margin-top: 0;
+    color: rgb(197, 164, 112);
 }
 
 .loginForm input {
@@ -31,13 +32,13 @@
     font-size: 15px;
     background-color: rgb(243, 220, 185);
     transition: 0.1s all linear;
+    cursor: pointer;
 }
 
 .loginForm button:hover {
     transform: scale(1.05);
     transition: 0.1s all linear;
     background-color: rgb(236, 208, 164);
-    cursor: pointer;
 }
 
 .error{

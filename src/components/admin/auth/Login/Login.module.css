@@ -1,4 +1,4 @@
-.registerForm{
+.loginForm{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -11,12 +11,12 @@
     margin-top: 100px;
 }
 
-.registerForm h1{
+.loginForm h1{
     margin-top: 0;
     color: rgb(197, 164, 112);
 }
 
-.registerForm input {
+.loginForm input {
     border-radius: 0.5em;
     border: 1px solid;
     margin-bottom: 20px;
@@ -24,7 +24,7 @@
     height: 30px;
 }
 
-.registerForm button {
+.loginForm button {
     width: 120px;
     height: 30px;
     border: none; 
@@ -32,10 +32,9 @@
     font-size: 15px;
     background-color: rgb(243, 220, 185);
     transition: 0.1s all linear;
-    margin-top: 20px;
 }
 
-.registerForm button:hover {
+.loginForm button:hover {
     transform: scale(1.05);
     transition: 0.1s all linear;
     background-color: rgb(236, 208, 164);
@@ -43,12 +42,7 @@
 }
 
 .error{
-    margin-top: 20px;
     color: red;
-    font-size: 18px;
-}
-
-.confirmation{
     margin-top: 20px;
     font-size: 18px;
 }

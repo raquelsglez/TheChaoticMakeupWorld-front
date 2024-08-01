@@ -38,8 +38,14 @@ const Register = () => {
             );
             setError('');
             setConfirmation('You have registered successfully')
+            setValueUsername('')
+            setValueFirstName('')
+            setValueLastName('')
+            setValueEmail('')
+            setValuePassword('')
 
         } catch (err){
+            setConfirmation('')
             setError(err.response.data.message);
         }
     }
