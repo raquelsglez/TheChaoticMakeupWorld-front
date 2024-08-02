@@ -47,3 +47,27 @@
     margin-top: 20px;
     font-size: 18px;
 }
+
+.linkMainPage{
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 120px;
+    height: 40px;
+    border: none; 
+    border-radius: 0.5em;
+    font-size: 15px;
+    background-color: rgb(243, 220, 185);
+    transition: 0.1s all linear;
+    text-align: center;
+}
+
+.linkMainPage:hover {
+    transform: scale(1.05);
+    transition: 0.1s all linear;
+    background-color: rgb(236, 208, 164);
+    cursor: pointer;
+}

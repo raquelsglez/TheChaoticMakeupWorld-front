@@ -45,6 +45,7 @@ const Login = () => {
             <input type="password" id="pwd" name="pwd" placeholder="password" onChange={(e) => setValuePassword(e.target.value)} value={valuePassword}/>
             <button type="submit">Login</button>
             <Link className={styles.linkRegister} to="/register">Register</Link>
+            <Link className={styles.linkLoginAdmin} to="/admin/login">Login as administrator</Link>
             <span className={styles.error}>{error}</span>
         </form>
 

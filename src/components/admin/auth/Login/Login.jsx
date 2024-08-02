@@ -3,6 +3,7 @@ import { usePostContext } from "../../../../context/PostContext";
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 const AdminLogin = () => {
     const { setAdmin } = usePostContext(); //utilizo el contexto de post para actualizar admin
@@ -44,6 +45,7 @@ const AdminLogin = () => {
             <input type="email" id="email" name="email" placeholder="youremail@gmail.com" onChange={(e) => setValueEmail(e.target.value)} value={valueEmail}/>
             <input type="password" id="pwd" name="pwd" placeholder="password" onChange={(e) => setValuePassword(e.target.value)} value={valuePassword}/>
             <button type="submit">Login</button>
+            <Link className={styles.linkMainPage} to="/">Return to main page</Link>
             <span className={styles.error}>{error}</span>
         </form>
 
