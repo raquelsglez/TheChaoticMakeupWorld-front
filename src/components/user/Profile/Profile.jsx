@@ -1,4 +1,4 @@
-import { usePostContext } from "../../context/PostContext";
+import { usePostContext } from "../../../context/PostContext";
 import { CiLogout } from "react-icons/ci";
 import styles from './Profile.module.css';
 import { useNavigate } from 'react-router-dom';

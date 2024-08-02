@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { usePostContext } from "../../../context/PostContext";
+import { usePostContext } from "../../../../context/PostContext";
 import styles from "./PostDetail.module.css";
 import { BsBalloonHeartFill } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
-import { usePostContext } from "../../../context/PostContext";
+import { usePostContext } from "../../../../context/PostContext";
 import PostCard from "../PostCard/PostCard";
 import styles from "./PostList.module.css"
 import { SlArrowDown } from "react-icons/sl";

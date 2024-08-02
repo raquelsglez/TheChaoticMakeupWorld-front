@@ -28,6 +28,8 @@ const AdminPostDetail = () => {
           setPost(newPost); //actualizo post en el contexgo con los datos obtenidos
           setError(null); //borro error
 
+          console.log("EEOEOOEOEO")
+
         } catch (err){
           if (err.response && err.response.status === 404) { //errores de la respouesta de la solictud(HTTP)
             setError("Post not found");
@@ -94,7 +96,7 @@ const AdminPostDetail = () => {
           <div className={styles.modalContent}>
             <p>Are you sure you want to delete this post?</p>
             <div className={styles.modalConditions}>
-              <button onClick={handleClickDelete}>SI</button>
+              <button onClick={handleClickDelete}>YES</button>
               <button onClick={handleCloseModalDelete}>NO</button>
             </div>
           </div>

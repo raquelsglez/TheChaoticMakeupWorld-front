@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import styles from "./Root.module.css"
 import { FaUser } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
-import { usePostContext } from "../context/PostContext";
+import { usePostContext } from "../../../context/PostContext";
 import { RiHomeHeartFill } from "react-icons/ri";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa6";

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { usePostContext } from '../context/PostContext';
+import { usePostContext } from '../../context/PostContext';
 import { Outlet } from "react-router-dom";
 
 const PrivateRoute = () => {

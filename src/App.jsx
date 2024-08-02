@@ -1,12 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Root from './components/Root';
+import Root from './components/user/root/Root';
 import { PostProvider } from './context/PostContext'
-import PostList from "./components/post/PostList/PostList";
-import PostDetail from "./components/post/PostDetail/PostDetail";
-import Register from './components/auth/Register/Register';
-import Login from './components/auth/Login/Login';
-import Profile from "./components/Profile/Profile";
+import PostList from "./components/user/post/PostList/PostList";
+import PostDetail from "./components/user/post/PostDetail/PostDetail";
+import PrivateRoute from "./components/user/PrivateRoute";
+import PostFavorites from "./components/user/post/PostFavorites/PostFavorites";
+import Register from './components/user/auth/Register/Register';
+import Login from './components/user/auth/Login/Login';
+import Profile from "./components/user/Profile/Profile";
 import RootAdmin from "./components/admin/root/Root";
 import AdminLogin from "./components/admin/auth/Login/Login";
 import AdminPostList from "./components/admin/post/PostList/PostList";
@@ -15,8 +17,7 @@ import AdminPostEdit from "./components/admin/post/PostEdit/PostEdit";
 import AdminPostCreate from "./components/admin/post/PostCreate/PostCreate";
 import AdminPrivateRoute from "./components/admin/PrivateRoute"; 
 import AdminRegister from "./components/admin/auth/Register/Register";
-import PrivateRoute from "./components/PrivateRoute";
-import PostFavorites from "./components/post/PostFavorites/PostFavorites";
+
 
 function App() {
   return (

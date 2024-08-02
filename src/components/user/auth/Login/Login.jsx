@@ -1,5 +1,5 @@
 import styles from './Login.module.css';
-import { usePostContext } from "../../../context/PostContext";
+import { usePostContext } from "../../../../context/PostContext";
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 import axios from 'axios';
@@ -45,7 +45,6 @@ const Login = () => {
             <input type="password" id="pwd" name="pwd" placeholder="password" onChange={(e) => setValuePassword(e.target.value)} value={valuePassword}/>
             <button type="submit">Login</button>
             <Link className={styles.linkRegister} to="/register">Register</Link>
-            <Link className={styles.linkLoginAdmin} to="/admin/login">Login as administrator</Link>
             <span className={styles.error}>{error}</span>
         </form>
 
