@@ -15,14 +15,11 @@ function Root() {
 
   const handleClickHome = () => {
     navigate('/');
+    return;
   };
 
   const handleClickProfile = () => {
-    if(user.username){ // al hacer click en el icono de usuario -> si el user esta logdueado navegar al profile
-      navigate('/profile');
-      return;
-    }
-    navigate('/login'); //si el usuario no esta logueado navegar al login
+    navigate('/profile');
     return;
   };
 

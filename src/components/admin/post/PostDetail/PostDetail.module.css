@@ -74,6 +74,7 @@
     height: 30px;
     cursor: pointer;
     transition: 0.1s all linear;
+    font-family: "Gothic A1", sans-serif;
 }
 
 .modalConditions button:hover{

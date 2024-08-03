@@ -21,6 +21,7 @@
     margin-bottom: 20px;
     width: 200px;
     height: 30px;
+    font-family: "Gothic A1", sans-serif;
 }
 
 .registerForm button {
@@ -32,6 +33,7 @@
     background-color: rgb(243, 220, 185);
     transition: 0.1s all linear;
     margin-top: 20px;
+    font-family: "Gothic A1", sans-serif;
 }
 
 .registerForm button:hover {

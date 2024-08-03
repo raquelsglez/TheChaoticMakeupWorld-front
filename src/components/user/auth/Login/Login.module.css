@@ -22,6 +22,7 @@
     margin-bottom: 20px;
     width: 200px;
     height: 30px;
+    font-family: "Gothic A1", sans-serif;
 }
 
 .loginForm button {
@@ -33,6 +34,7 @@
     background-color: rgb(243, 220, 185);
     transition: 0.1s all linear;
     cursor: pointer;
+    font-family: "Gothic A1", sans-serif;
 }
 
 .loginForm button:hover {
@@ -61,6 +63,7 @@
     font-size: 15px;
     background-color: rgb(243, 220, 185);
     transition: 0.1s all linear;
+    font-family: "Gothic A1", sans-serif;
 }
 
 .linkRegister:hover {
