@@ -55,6 +55,7 @@ npm run dev
 - **Administrador**: No se puede acceder al administrador desde ningun lugar de la aplicación, se deberá acceder conociendo sus rutas pará que asi un usuario base no pueda acceder a este apartado. Se ha habilitado un administrador: 
     - **email:** profesor@gmail.com
     - **pasword:** profesor 
+    - **ruta para acceder a la pantalla de administrador:** https://thechaoticmakeupworld-front-1.onrender.com/admin 
 
 ## Código
 ### Componentes
